@@ -44,6 +44,16 @@
     
 <!-- header container -->
 <header class="header-container">
+  <script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入文章密码') !== '{{ page.password }}'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
   
     <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
@@ -104,8 +114,9 @@
 
   
   
-  
+
 </header>
+
 
     <!-- 标签归档 -->
 <!-- post list container -->
